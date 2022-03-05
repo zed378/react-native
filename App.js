@@ -4,7 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
 
 // import component / screens
-import Calculator from "./screens/Calculator";
+import Calculator1 from "./screens/Calculator1";
 
 // import styles
 import styles from "./assets/css";
@@ -12,7 +12,8 @@ import styles from "./assets/css";
 export default function App() {
   let [fontsLoaded] = useFonts({
     roboto: require("./assets/fonts/Roboto.ttf"),
-    archi: require("./assets/fonts/Architext.ttf"),
+    robotobold: require("./assets/fonts/Roboto-Bold.ttf"),
+    chakra: require("./assets/fonts/Chakra.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -21,7 +22,7 @@ export default function App() {
     return (
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <Calculator />
+        <Calculator1 />
       </View>
     );
   }

@@ -4,11 +4,13 @@ const styles = StyleSheet.create({
   calc: {
     width: "80%",
   },
+
   calcResult: {
     fontSize: 70,
     textAlign: "center",
     marginBottom: 10,
   },
+
   calcText: {
     fontFamily: "roboto",
     fontSize: 32,
@@ -16,6 +18,7 @@ const styles = StyleSheet.create({
     color: "black",
     marginBottom: 10,
   },
+
   calcInput: {
     backgroundColor: "white",
     fontSize: 30,
@@ -25,12 +28,14 @@ const styles = StyleSheet.create({
     paddingRight: 15,
     marginBottom: 20,
   },
+
   btnGroup: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     flexWrap: "wrap",
   },
+
   calcButton: {
     backgroundColor: "#FF5757",
     width: "25%",
@@ -41,6 +46,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 5,
   },
+
   calcBtn: {
     fontFamily: "roboto",
     fontSize: 55,
