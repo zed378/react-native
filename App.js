@@ -4,7 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
 
 // import component / screens
-import Calculator1 from "./screens/Calculator1";
+import Calculator from "./screens/Calculator";
 
 // import styles
 import styles from "./assets/css";
@@ -22,7 +22,7 @@ export default function App() {
     return (
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <Calculator1 />
+        <Calculator />
       </View>
     );
   }

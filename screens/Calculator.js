@@ -1,4 +1,10 @@
-import { View, Text, SafeAreaView, TextInput, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { useState } from "react";
 
 // import styles
@@ -9,34 +15,43 @@ function Calculator() {
   const [valB, setValB] = useState(null);
   const [result, setResult] = useState(0);
 
+  const a = parseInt(valA);
+  const b = parseInt(valB);
+
   const plus = () => {
-    const a = parseInt(valA);
-    const b = parseInt(valB);
-    setResult(a + b);
+    if (valA || valB !== null) {
+      setResult(a + b);
+    }
   };
 
   const minus = () => {
-    const a = parseInt(valA);
-    const b = parseInt(valB);
-    setResult(a - b);
+    if (valA || valB !== null) {
+      setResult(a - b);
+    }
   };
 
   const multiply = () => {
-    const a = parseInt(valA);
-    const b = parseInt(valB);
-    setResult(a * b);
+    if (valA || valB !== null) {
+      setResult(a * b);
+    }
   };
 
   const divide = () => {
-    const a = parseInt(valA);
-    const b = parseInt(valB);
-    setResult(a / b);
+    if (valA || valB !== null) {
+      setResult(a / b);
+    }
   };
 
   const modulus = () => {
-    const a = parseInt(valA);
-    const b = parseInt(valB);
-    setResult(a % b);
+    if (valA || valB !== null) {
+      setResult(a % b);
+    }
+  };
+
+  const clear = () => {
+    setResult(0);
+    setValA(null);
+    setValB(null);
   };
 
   return (
@@ -58,21 +73,24 @@ function Calculator() {
       </SafeAreaView>
 
       <View style={styles.btnGroup}>
-        <Pressable style={styles.calcButton} onPress={plus}>
+        <TouchableOpacity style={styles.calcButton} onPress={plus}>
           <Text style={styles.calcBtn}>+</Text>
-        </Pressable>
-        <Pressable style={styles.calcButton} onPress={minus}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.calcButton} onPress={minus}>
           <Text style={styles.calcBtn}>-</Text>
-        </Pressable>
-        <Pressable style={styles.calcButton} onPress={multiply}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.calcButton} onPress={multiply}>
           <Text style={styles.calcBtn}>*</Text>
-        </Pressable>
-        <Pressable style={styles.calcButton} onPress={divide}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.calcButton} onPress={divide}>
           <Text style={styles.calcBtn}>/</Text>
-        </Pressable>
-        <Pressable style={styles.calcButton} onPress={modulus}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.calcButton} onPress={modulus}>
           <Text style={styles.calcBtn}>%</Text>
-        </Pressable>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.calcButton} onPress={clear}>
+          <Text style={styles.calcBtn}>AC</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

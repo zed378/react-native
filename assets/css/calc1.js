@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   },
 
   calcResult: {
-    fontSize: 70,
+    fontSize: 125,
     textAlign: "center",
     marginBottom: 10,
   },
@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
 
   calcInput: {
     backgroundColor: "white",
-    fontSize: 30,
-    height: 40,
+    fontSize: 27.5,
+    height: 45,
     borderRadius: 10,
     paddingLeft: 15,
     paddingRight: 15,

@@ -1,4 +1,4 @@
-import { View, Text, Pressable, Alert } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { useState } from "react";
 
 // import styles
@@ -49,7 +49,7 @@ function Calculator1() {
       </View>
 
       <View style={styles.groupBtn}>
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "1");
@@ -61,9 +61,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>1</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "2");
@@ -75,9 +75,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>2</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnOperator}
           onPress={() => {
             if (result === 0 && valA !== 0 && valB === 0) {
@@ -95,9 +95,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>-</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnOperator}
           onPress={() => {
             if (result === 0 && valA !== 0 && valB === 0) {
@@ -115,9 +115,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>+</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "3");
@@ -129,9 +129,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>3</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "4");
@@ -143,9 +143,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>4</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnOperator}
           onPress={() => {
             if (result === 0 && valA !== 0 && valB === 0) {
@@ -163,9 +163,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>/</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnOperator}
           onPress={() => {
             if (result === 0 && valA !== 0 && valB === 0) {
@@ -183,9 +183,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>*</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "5");
@@ -197,9 +197,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>5</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "6");
@@ -211,9 +211,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>6</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnOperator}
           onPress={() => {
             if (result === 0 && valA !== 0 && valB === 0) {
@@ -231,13 +231,13 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>%</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable style={styles.btnOperator} onPress={equal}>
+        <TouchableOpacity style={styles.btnOperator} onPress={equal}>
           <Text style={styles.btnText}>=</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "7");
@@ -249,9 +249,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>7</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "8");
@@ -263,9 +263,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>8</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "9");
@@ -277,9 +277,9 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>9</Text>
-        </Pressable>
+        </TouchableOpacity>
 
-        <Pressable
+        <TouchableOpacity
           style={styles.btnNumber}
           onPress={() => {
             setPreview(preview + "0");
@@ -293,12 +293,12 @@ function Calculator1() {
           }}
         >
           <Text style={styles.btnText}>0</Text>
-        </Pressable>
+        </TouchableOpacity>
       </View>
 
-      <Pressable style={styles.btnClear} onPress={clear}>
+      <TouchableOpacity style={styles.btnClear} onPress={clear}>
         <Text style={styles.btnClr}>Clear</Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 }
