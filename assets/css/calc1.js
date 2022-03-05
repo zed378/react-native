@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   btnGroup: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     flexWrap: "wrap",
   },
 
