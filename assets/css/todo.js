@@ -21,10 +21,12 @@ const styles = StyleSheet.create({
   listView: {
     width: "100%",
     alignItems: "center",
+    paddingLeft: 10,
+    paddingRight: 10,
   },
 
   todoDetail: {
-    width: "95%",
+    width: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -41,16 +43,25 @@ const styles = StyleSheet.create({
     width: "85%",
     fontSize: 20,
     alignItems: "center",
-    margin: 0,
     fontFamily: "roboto",
     color: "white",
+  },
+
+  taskTextDone: {
+    width: "85%",
+    fontSize: 20,
+    alignItems: "center",
+    fontFamily: "roboto",
+    color: "#4f4447",
+    textDecorationLine: "line-through",
+    textDecorationStyle: "solid",
   },
 
   btnGroup: {
     width: "15%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
   },
 
   editTask: {

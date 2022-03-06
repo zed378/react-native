@@ -64,12 +64,14 @@ function Calculator() {
             style={styles.calcInput}
             onChangeText={setValA}
             value={valA}
+            keyboardType="numeric"
           />
           <Text style={styles.calcText}>Value B</Text>
           <TextInput
             style={styles.calcInput}
             onChangeText={setValB}
             value={valB}
+            keyboardType="numeric"
           />
         </SafeAreaView>
 
