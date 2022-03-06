@@ -51,7 +51,7 @@ function Todo() {
       <View style={styles.listView}>
         {/* Begin task component */}
         <LinearGradient
-          colors={["#F2789F", "#9145B6"]}
+          colors={["#FFA0A0", "#E7305B"]}
           start={{
             x: 0,
             y: 0,

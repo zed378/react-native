@@ -7,6 +7,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  welcome: {
+    fontSize: 30,
+    color: "white",
+  },
 });
 
 export default styles;

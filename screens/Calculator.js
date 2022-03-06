@@ -55,42 +55,44 @@ function Calculator() {
   };
 
   return (
-    <View style={styles.calc}>
-      <SafeAreaView>
-        <Text style={styles.calcResult}>{result}</Text>
-        <Text style={styles.calcText}>Value A</Text>
-        <TextInput
-          style={styles.calcInput}
-          onChangeText={setValA}
-          value={valA}
-        />
-        <Text style={styles.calcText}>Value B</Text>
-        <TextInput
-          style={styles.calcInput}
-          onChangeText={setValB}
-          value={valB}
-        />
-      </SafeAreaView>
+    <View style={styles.container}>
+      <View style={styles.calc}>
+        <SafeAreaView>
+          <Text style={styles.calcResult}>{result}</Text>
+          <Text style={styles.calcText}>Value A</Text>
+          <TextInput
+            style={styles.calcInput}
+            onChangeText={setValA}
+            value={valA}
+          />
+          <Text style={styles.calcText}>Value B</Text>
+          <TextInput
+            style={styles.calcInput}
+            onChangeText={setValB}
+            value={valB}
+          />
+        </SafeAreaView>
 
-      <View style={styles.btnGroup}>
-        <TouchableOpacity style={styles.calcButton} onPress={plus}>
-          <Text style={styles.calcBtn}>+</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.calcButton} onPress={minus}>
-          <Text style={styles.calcBtn}>-</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.calcButton} onPress={multiply}>
-          <Text style={styles.calcBtn}>*</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.calcButton} onPress={divide}>
-          <Text style={styles.calcBtn}>/</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.calcButton} onPress={modulus}>
-          <Text style={styles.calcBtn}>%</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.calcButton} onPress={clear}>
-          <Text style={styles.calcBtn}>AC</Text>
-        </TouchableOpacity>
+        <View style={styles.btnGroup}>
+          <TouchableOpacity style={styles.calcButton} onPress={plus}>
+            <Text style={styles.calcBtn}>+</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.calcButton} onPress={minus}>
+            <Text style={styles.calcBtn}>-</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.calcButton} onPress={multiply}>
+            <Text style={styles.calcBtn}>*</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.calcButton} onPress={divide}>
+            <Text style={styles.calcBtn}>/</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.calcButton} onPress={modulus}>
+            <Text style={styles.calcBtn}>%</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.calcButton} onPress={clear}>
+            <Text style={styles.calcBtn}>AC</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

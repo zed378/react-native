@@ -1,6 +1,14 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FFA0A0",
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%",
+  },
+
   calc: {
     width: "80%",
   },

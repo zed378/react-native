@@ -13,9 +13,9 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: "robotobold",
     fontSize: 35,
-    marginTop: 40,
-    marginBottom: 15,
-    color: "#B958A5",
+    marginTop: 10,
+    marginBottom: 10,
+    color: "#E7305B",
   },
 
   listView: {
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     width: "87.5%",
     paddingLeft: 15,
     paddingRight: 15,
-    backgroundColor: "#EDD2F3",
+    backgroundColor: "#FFC6C7",
     height: 45,
     fontSize: 25,
   },
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   btnAdd: {
     width: "12.5%",
     height: 45,
-    backgroundColor: "#9145B6",
+    backgroundColor: "#E7305B",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#32323250",
+    backgroundColor: "#FF8BA750",
   },
 
   modalCard: {
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   },
 
   editInput: {
-    backgroundColor: "#EDD2F3",
+    backgroundColor: "#FFC6C7",
     borderRadius: 5,
     fontSize: 20,
     paddingLeft: 10,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
 
   saveBtn: {
     width: "35%",
-    backgroundColor: "#9145B6",
+    backgroundColor: "#BAABDA",
     justifyContent: "center",
     alignItems: "center",
     paddingTop: 5,
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
 
   cancelBtn: {
     width: "35%",
-    backgroundColor: "#F2789F",
+    backgroundColor: "#E7305B",
     justifyContent: "center",
     alignItems: "center",
     paddingTop: 5,
