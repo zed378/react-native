@@ -5,6 +5,8 @@ import { Text, View } from "react-native";
 
 // import component / screens
 import Calculator from "./screens/Calculator";
+import Calculator1 from "./screens/Calculator1";
+import Todo from "./screens/Todo";
 
 // import styles
 import styles from "./assets/css";
@@ -22,7 +24,7 @@ export default function App() {
     return (
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <Calculator />
+        <Todo />
       </View>
     );
   }
