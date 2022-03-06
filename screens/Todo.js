@@ -19,7 +19,7 @@ function Todo() {
   const [isLoading, setIsLoading] = useState(false);
   const [taskAdd, setTaskAdd] = useState(null);
   const [list, setList] = useState([]);
-  const [editValue, setEditValue] = useState(null);
+  const [edit, setEdit] = useState(null);
 
   const [modalView, setModalView] = useState(null);
 
@@ -31,6 +31,7 @@ function Todo() {
       .then((res) => {
         setList(res.data.data);
         setIsLoading(false);
+        setTaskAdd(null);
       })
       .catch(() => {
         Alert.alert("Error", "Can't Get Data", [
@@ -56,20 +57,21 @@ function Todo() {
   };
 
   // edit data
-  const editTodo = (id) => {
-    axios
-      .patch(
-        `https://tasktodo378.herokuapp.com/api/v1.0/task/${id}/${editValue}`
-      )
-      .then(() => {
-        getTask();
-        setModalView(null);
-      })
-      .catch(() => {
-        Alert.alert("Error", "Can't Edit Data", [
-          { text: "OK", onPress: () => console.log("OK Pressed") },
-        ]);
-      });
+  const editTodo = (id, val) => {
+    if (edit !== null) {
+      axios
+        .patch(`https://tasktodo378.herokuapp.com/api/v1.0/task/${id}/${val}`)
+        .then(() => {
+          getTask();
+          setModalView(null);
+          setEdit(null);
+        })
+        .catch(() => {
+          Alert.alert("Error", "Can't Edit Data", [
+            { text: "OK", onPress: () => console.log("OK Pressed") },
+          ]);
+        });
+    }
   };
 
   // delete data
@@ -116,7 +118,11 @@ function Todo() {
       >
         <Text
           style={item.isDone === 1 ? styles.taskTextDone : styles.taskText}
-          onPress={() => editModal(item.id, item.name)}
+          onPress={() => {
+            if (item.isDone !== 1) {
+              editModal(item.id, item.name);
+            }
+          }}
         >
           {item.name}
         </Text>
@@ -150,25 +156,29 @@ function Todo() {
         transparent={true}
         onRequestClose={() => {
           setModalView(null);
+          setEdit(null);
         }}
       >
         <View style={styles.modalContainer}>
           <View style={styles.modalCard}>
             <TextInput
               style={styles.editInput}
-              onChangeText={setEditValue}
+              onChangeText={(text) => setEdit(toString(text))}
               placeholder={name}
             />
             <View style={styles.editBtnGroup}>
               <TouchableOpacity
                 style={styles.saveBtn}
-                onPress={() => editTodo(id)}
+                onPress={() => editTodo(id, edit)}
               >
                 <Text style={styles.saveText}>Save</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.cancelBtn}
-                onPress={() => setModalView(null)}
+                onPress={() => {
+                  setEdit(null);
+                  setModalView(null);
+                }}
               >
                 <Text style={styles.cancelText}>Cancel</Text>
               </TouchableOpacity>
