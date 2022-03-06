@@ -11,6 +11,29 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 30,
     color: "white",
+    marginBottom: 30,
+  },
+
+  btnWrapper: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+
+  simple: {
+    height: 75,
+    width: 75,
+  },
+
+  complex: {
+    height: 75,
+    width: 75,
+  },
+
+  task: {
+    height: 75,
+    width: 75,
   },
 });
 
