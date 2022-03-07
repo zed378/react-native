@@ -163,7 +163,7 @@ function Todo() {
           <View style={styles.modalCard}>
             <TextInput
               style={styles.editInput}
-              onChangeText={(text) => setEdit(toString(text))}
+              onChangeText={setEdit}
               placeholder={name}
             />
             <View style={styles.editBtnGroup}>
