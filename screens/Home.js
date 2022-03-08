@@ -18,7 +18,7 @@ function Home({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate("Calculator1")}>
           <Image style={styles.complex} source={calcu2} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Todo")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Todos")}>
           <Image style={styles.task} source={todo} />
         </TouchableOpacity>
       </View>

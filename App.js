@@ -60,7 +60,7 @@ function App() {
           />
 
           <Stack.Screen
-            name="Todo"
+            name="Todos"
             component={Todos}
             options={{
               title: "Todo App",
