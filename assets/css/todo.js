@@ -121,14 +121,20 @@ const styles = StyleSheet.create({
 
   modalContainer: {
     flex: 1,
+    width: "100%",
+    height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FF8BA750",
+    position: "absolute",
+    zIndex: 9,
+    elevation: 9,
   },
 
   modalCard: {
-    width: "75%",
+    width: "85%",
     padding: 10,
+    borderWidth: 1,
+    borderColor: "#FFC6C7",
     backgroundColor: "white",
     borderRadius: 5,
   },

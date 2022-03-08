@@ -8,7 +8,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import screens
 import Calculator from "./screens/Calculator";
 import Calculator1 from "./screens/Calculator1";
-import Todo from "./screens/Todo";
+import Todos from "./screens/Todos";
 import Home from "./screens/Home";
 
 // create navigator
@@ -61,7 +61,7 @@ function App() {
 
           <Stack.Screen
             name="Todo"
-            component={Todo}
+            component={Todos}
             options={{
               title: "Todo App",
             }}

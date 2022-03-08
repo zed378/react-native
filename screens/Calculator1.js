@@ -81,14 +81,19 @@ function Calculator1() {
           <TouchableOpacity
             style={styles.btnOperator}
             onPress={() => {
-              if (result === 0 && valA !== 0 && valB === 0) {
+              if (result === 0 && valA !== 0 && valB === 0 && !operator) {
                 setOperator("-");
                 setPreview(preview + " - ");
               } else if (result === 0 && valA && valB !== 0) {
                 equal();
               } else if (result && valA && valB !== 0) {
                 equal();
-              } else if (result !== 0 && valA === 0 && valB === 0) {
+              } else if (
+                result !== 0 &&
+                valA === 0 &&
+                valB === 0 &&
+                !operator
+              ) {
                 setValA(result);
                 setOperator("-");
                 setPreview(result + " - ");
@@ -101,14 +106,19 @@ function Calculator1() {
           <TouchableOpacity
             style={styles.btnOperator}
             onPress={() => {
-              if (result === 0 && valA !== 0 && valB === 0) {
+              if (result === 0 && valA !== 0 && valB === 0 && !operator) {
                 setOperator("+");
                 setPreview(preview + " + ");
               } else if (result === 0 && valA && valB !== 0) {
                 equal();
               } else if (result && valA && valB !== 0) {
                 equal();
-              } else if (result !== 0 && valA === 0 && valB === 0) {
+              } else if (
+                result !== 0 &&
+                valA === 0 &&
+                valB === 0 &&
+                !operator
+              ) {
                 setValA(result);
                 setOperator("+");
                 setPreview(result + " + ");
@@ -149,14 +159,19 @@ function Calculator1() {
           <TouchableOpacity
             style={styles.btnOperator}
             onPress={() => {
-              if (result === 0 && valA !== 0 && valB === 0) {
+              if (result === 0 && valA !== 0 && valB === 0 && !operator) {
                 setOperator("/");
                 setPreview(preview + " / ");
               } else if (result === 0 && valA && valB !== 0) {
                 equal();
               } else if (result && valA && valB !== 0) {
                 equal();
-              } else if (result !== 0 && valA === 0 && valB === 0) {
+              } else if (
+                result !== 0 &&
+                valA === 0 &&
+                valB === 0 &&
+                !operator
+              ) {
                 setValA(result);
                 setOperator("/");
                 setPreview(result + " / ");
@@ -169,14 +184,19 @@ function Calculator1() {
           <TouchableOpacity
             style={styles.btnOperator}
             onPress={() => {
-              if (result === 0 && valA !== 0 && valB === 0) {
+              if (result === 0 && valA !== 0 && valB === 0 && !operator) {
                 setOperator("*");
                 setPreview(preview + " * ");
               } else if (result === 0 && valA && valB !== 0) {
                 equal();
               } else if (result && valA && valB !== 0) {
                 equal();
-              } else if (result !== 0 && valA === 0 && valB === 0) {
+              } else if (
+                result !== 0 &&
+                valA === 0 &&
+                valB === 0 &&
+                !operator
+              ) {
                 setValA(result);
                 setOperator("*");
                 setPreview(result + " * ");
@@ -217,14 +237,19 @@ function Calculator1() {
           <TouchableOpacity
             style={styles.btnOperator}
             onPress={() => {
-              if (result === 0 && valA !== 0 && valB === 0) {
+              if (result === 0 && valA !== 0 && valB === 0 && !operator) {
                 setOperator("%");
                 setPreview(preview + " % ");
               } else if (result === 0 && valA && valB !== 0) {
                 equal();
               } else if (result && valA && valB !== 0) {
                 equal();
-              } else if (result !== 0 && valA === 0 && valB === 0) {
+              } else if (
+                result !== 0 &&
+                valA === 0 &&
+                valB === 0 &&
+                !operator
+              ) {
                 setValA(result);
                 setOperator("%");
                 setPreview(result + " % ");
